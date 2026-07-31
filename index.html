@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Politique de confidentialité — MusicPlayer</title>
+    <title>Privacy Policy / Politique de confidentialité — Music Player</title>
+    <meta name="description" content="Privacy policy for the Music Player Android app (com.francotte.musicplayer). Politique de confidentialité de l'application Music Player." />
     <style>
         :root {
             --bg: #ffffff;
@@ -80,138 +81,358 @@
             font-size: 0.88rem;
             color: var(--muted);
         }
+
+        /* --- Sélecteur de langue --- */
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+        .lang-switch button {
+            font: inherit;
+            font-size: 0.9rem;
+            color: var(--muted);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 16px;
+            cursor: pointer;
+            transition: color .15s, border-color .15s;
+        }
+        .lang-switch button:hover { color: var(--fg); }
+        .lang-switch button[aria-pressed="true"] {
+            color: var(--bg);
+            background: var(--accent);
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+        @media (prefers-color-scheme: dark) {
+            .lang-switch button[aria-pressed="true"] { color: #0f1020; }
+        }
+
+        /* Sans JavaScript, les deux versions restent visibles : une politique de
+           confidentialité doit être lisible en toutes circonstances. Le script
+           pose .js-on sur <html> et n'active le masquage qu'à ce moment-là. */
+        .lang-switch { display: none; }
+        .js-on .lang-switch { display: flex; }
+        .js-on [data-lang][hidden] { display: none; }
+        .lang-sep {
+            margin: 56px 0 0;
+            border: 0;
+            border-top: 1px solid var(--border);
+        }
+        .js-on .lang-sep { display: none; }
     </style>
 </head>
 <body>
 <div class="wrap">
-    <header>
-        <h1>Politique de confidentialité</h1>
-        <p class="muted">Application&nbsp;: <strong>MusicPlayer</strong><br />
-            Dernière mise à jour&nbsp;: 14 juillet 2026</p>
-    </header>
 
-    <p>
-        La présente politique de confidentialité décrit comment l'application mobile
-        <strong>MusicPlayer</strong> (« l'application ») traite les informations lorsque vous
-        l'utilisez. L'application est un lecteur de musique qui lit les fichiers audio stockés
-        sur votre appareil. Elle est éditée par un développeur indépendant (« nous »,
-        « le développeur »).
-    </p>
-
-    <div class="card">
-        <strong>En résumé&nbsp;:</strong> MusicPlayer ne crée pas de compte, ne vous demande
-        aucune donnée personnelle et conserve vos playlists et favoris uniquement sur votre
-        appareil. Les seules données transmises à des tiers le sont par le SDK publicitaire
-        Google AdMob, afin d'afficher des annonces.
+    <div class="lang-switch" role="group" aria-label="Language / Langue">
+        <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-set-lang="fr" aria-pressed="false">Français</button>
     </div>
 
-    <h2>1. Informations traitées</h2>
+    <!-- ============================ ENGLISH ============================ -->
+    <section data-lang="en" lang="en">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="muted">App: <strong>Music Player</strong> (<code>com.francotte.musicplayer</code>)<br />
+                Last updated: 31 July 2026</p>
+        </header>
 
-    <h3>Fichiers audio locaux</h3>
-    <p>
-        Pour afficher et lire votre musique, l'application accède aux fichiers audio présents
-        sur votre appareil (autorisation d'accès aux fichiers multimédias). Ces fichiers sont
-        lus localement&nbsp;: ils ne sont ni copiés, ni téléversés, ni transmis à qui que ce soit.
-    </p>
+        <p>
+            This privacy policy describes how the <strong>Music Player</strong> mobile application
+            (“the app”) handles information when you use it. The app is a music player that plays
+            audio files stored on your device. It is published by an independent developer
+            (“we”, “the developer”).
+        </p>
 
-    <h3>Données stockées localement</h3>
-    <p>
-        Vos playlists, vos favoris et vos préférences sont enregistrés uniquement sur votre
-        appareil (stockage local de l'application). Ils ne sont pas synchronisés vers un serveur
-        et disparaissent si vous désinstallez l'application ou effacez ses données.
-    </p>
+        <div class="card">
+            <strong>In short:</strong> Music Player does not create an account, does not ask you for
+            any personal data, and keeps your playlists and favourites on your device only. The only
+            data shared with a third party is shared by the Google AdMob advertising SDK, in order to
+            display ads.
+        </div>
 
-    <h3>Publicité (Google AdMob)</h3>
-    <p>
-        L'application affiche des annonces fournies par <strong>Google AdMob</strong>
-        (Google Mobile Ads SDK). Pour diffuser et mesurer ces annonces, Google peut collecter
-        et traiter certaines informations, notamment&nbsp;:
-    </p>
-    <ul>
-        <li>l'identifiant publicitaire de l'appareil (Advertising ID)&nbsp;;</li>
-        <li>des identifiants d'appareil et des informations techniques (modèle, système, langue)&nbsp;;</li>
-        <li>l'adresse IP (approximation de la localisation à l'échelle du pays/région)&nbsp;;</li>
-        <li>des données d'interaction avec les annonces.</li>
-    </ul>
-    <p>
-        Ces traitements sont réalisés par Google en tant que fournisseur tiers. Pour en savoir
-        plus, consultez la
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>
-        et la page
-        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">« Comment Google utilise les données »</a>.
-    </p>
+        <h2>1. Information processed</h2>
 
-    <h2>2. Consentement et RGPD</h2>
-    <p>
-        Si vous vous trouvez dans l'Espace économique européen (EEE), au Royaume-Uni ou en Suisse,
-        l'application affiche, avant de charger des annonces, un formulaire de consentement géré
-        par la plateforme <strong>Google User Messaging Platform (UMP)</strong>, conformément au
-        RGPD. Vous pouvez y accepter ou refuser l'utilisation de vos données à des fins
-        publicitaires. Si vous refusez, des annonces non personnalisées peuvent tout de même être
-        affichées.
-    </p>
+        <h3>Local audio files</h3>
+        <p>
+            To display and play your music, the app accesses the audio files present on your device
+            (media files permission). These files are read locally: they are never copied, uploaded,
+            or transmitted to anyone.
+        </p>
 
-    <h2>3. Finalités</h2>
-    <p>Les informations décrites ci-dessus sont utilisées uniquement pour&nbsp;:</p>
-    <ul>
-        <li>vous permettre de parcourir et d'écouter votre musique locale&nbsp;;</li>
-        <li>enregistrer vos playlists et favoris sur votre appareil&nbsp;;</li>
-        <li>afficher des annonces via Google AdMob et financer l'application.</li>
-    </ul>
-    <p>Le développeur ne vend ni ne loue aucune donnée personnelle.</p>
+        <h3>Data stored locally</h3>
+        <p>
+            Your playlists, favourites and preferences are saved on your device only (the app's local
+            storage). They are not synchronised to any server and are removed if you uninstall the
+            app or clear its data.
+        </p>
 
-    <h2>4. Partage avec des tiers</h2>
-    <p>
-        Le seul tiers avec lequel des données sont partagées est <strong>Google</strong>, via le
-        SDK Google Mobile Ads (AdMob) et la plateforme de consentement UMP. Le développeur n'a pas
-        accès aux données collectées par Google et ne partage vos informations avec aucun autre
-        tiers.
-    </p>
+        <h3>Advertising (Google AdMob)</h3>
+        <p>
+            The app displays ads provided by <strong>Google AdMob</strong> (Google Mobile Ads SDK).
+            In order to serve and measure these ads, Google may collect and process certain
+            information, including:
+        </p>
+        <ul>
+            <li>the device advertising identifier (Advertising ID);</li>
+            <li>device identifiers and technical information (model, operating system, language);</li>
+            <li>the IP address (approximate location at country/region level);</li>
+            <li>ad interaction data.</li>
+        </ul>
+        <p>
+            This processing is carried out by Google as a third-party provider. For more information,
+            see
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>
+            and the
+            <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">“How Google uses data” page</a>.
+        </p>
 
-    <h2>5. Enfants</h2>
-    <p>
-        L'application n'est pas destinée aux enfants de moins de 13 ans et ne collecte pas
-        sciemment de données les concernant.
-    </p>
+        <h2>2. Consent and GDPR</h2>
+        <p>
+            If you are located in the European Economic Area (EEA), the United Kingdom or
+            Switzerland, the app displays a consent form managed by the
+            <strong>Google User Messaging Platform (UMP)</strong> before loading any ads, in
+            accordance with the GDPR. There you can accept or refuse the use of your data for
+            advertising purposes. If you refuse, non-personalised ads may still be displayed.
+        </p>
 
-    <h2>6. Sécurité et conservation</h2>
-    <p>
-        Les données de l'application (playlists, favoris, préférences) restent sur votre appareil
-        et sont soumises aux protections de votre système d'exploitation. Elles sont conservées
-        tant que vous utilisez l'application et sont supprimées lorsque vous effacez ses données
-        ou la désinstallez. Les données publicitaires sont conservées par Google selon ses propres
-        politiques.
-    </p>
+        <h2>3. Purposes</h2>
+        <p>The information described above is used solely to:</p>
+        <ul>
+            <li>let you browse and listen to your local music;</li>
+            <li>save your playlists and favourites on your device;</li>
+            <li>display ads through Google AdMob and fund the app.</li>
+        </ul>
+        <p>The developer does not sell or rent any personal data.</p>
 
-    <h2>7. Vos droits</h2>
-    <p>
-        Selon votre pays de résidence (notamment dans l'EEE et au Royaume-Uni), vous disposez de
-        droits d'accès, de rectification, d'effacement et d'opposition concernant vos données.
-        Vous pouvez&nbsp;:
-    </p>
-    <ul>
-        <li>modifier votre choix de consentement publicitaire via le formulaire UMP de l'application&nbsp;;</li>
-        <li>réinitialiser votre identifiant publicitaire dans les réglages de votre appareil&nbsp;;</li>
-        <li>supprimer toutes les données locales en effaçant les données de l'application ou en la désinstallant&nbsp;;</li>
-        <li>nous contacter pour toute demande relative à vos données (voir ci-dessous).</li>
-    </ul>
+        <h2>4. Sharing with third parties</h2>
+        <p>
+            The only third party with which data is shared is <strong>Google</strong>, through the
+            Google Mobile Ads SDK (AdMob) and the UMP consent platform. The developer has no access
+            to the data collected by Google and does not share your information with any other third
+            party.
+        </p>
 
-    <h2>8. Modifications</h2>
-    <p>
-        Cette politique peut être mise à jour. Toute modification sera publiée sur cette page,
-        avec une date de mise à jour actualisée. Nous vous invitons à la consulter régulièrement.
-    </p>
+        <h2>5. Children</h2>
+        <p>
+            The app is not directed at children under 13 and does not knowingly collect data
+            concerning them.
+        </p>
 
-    <h2>9. Contact</h2>
-    <p>
-        Pour toute question concernant cette politique de confidentialité, vous pouvez nous
-        écrire à&nbsp;: <a href="mailto:rodolphefrancotte18@gmail.com">rodolphefrancotte18@gmail.com</a>
-    </p>
+        <h2>6. Security and retention</h2>
+        <p>
+            The app's data (playlists, favourites, preferences) stays on your device and is subject
+            to the protections of your operating system. It is retained for as long as you use the
+            app and is deleted when you clear the app's data or uninstall it. Advertising data is
+            retained by Google according to its own policies.
+        </p>
 
-    <footer>
-        © 2026 MusicPlayer. Ce document est fourni à titre informatif et ne constitue pas un
-        conseil juridique.
-    </footer>
+        <h2>7. Your rights</h2>
+        <p>
+            Depending on your country of residence (in particular within the EEA and the United
+            Kingdom), you have rights of access, rectification, erasure and objection regarding your
+            data. You can:
+        </p>
+        <ul>
+            <li>change your advertising consent choice through the app's UMP form;</li>
+            <li>reset your advertising identifier in your device settings;</li>
+            <li>delete all local data by clearing the app's data or uninstalling it;</li>
+            <li>contact us with any request concerning your data (see below).</li>
+        </ul>
+
+        <h2>8. Changes</h2>
+        <p>
+            This policy may be updated. Any change will be published on this page, with an updated
+            revision date. We encourage you to review it periodically.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+            For any question about this privacy policy, you can write to us at:
+            <a href="mailto:rodolphefrancotte18@gmail.com">rodolphefrancotte18@gmail.com</a>
+        </p>
+
+        <footer>
+            © 2026 Music Player. This document is provided for information purposes and does not
+            constitute legal advice.
+        </footer>
+    </section>
+
+    <hr class="lang-sep" />
+
+    <!-- ============================ FRANÇAIS ============================ -->
+    <section data-lang="fr" lang="fr" hidden>
+        <header>
+            <h1>Politique de confidentialité</h1>
+            <p class="muted">Application&nbsp;: <strong>Music Player</strong> (<code>com.francotte.musicplayer</code>)<br />
+                Dernière mise à jour&nbsp;: 31 juillet 2026</p>
+        </header>
+
+        <p>
+            La présente politique de confidentialité décrit comment l'application mobile
+            <strong>Music Player</strong> (« l'application ») traite les informations lorsque vous
+            l'utilisez. L'application est un lecteur de musique qui lit les fichiers audio stockés
+            sur votre appareil. Elle est éditée par un développeur indépendant (« nous »,
+            « le développeur »).
+        </p>
+
+        <div class="card">
+            <strong>En résumé&nbsp;:</strong> Music Player ne crée pas de compte, ne vous demande
+            aucune donnée personnelle et conserve vos playlists et favoris uniquement sur votre
+            appareil. Les seules données transmises à des tiers le sont par le SDK publicitaire
+            Google AdMob, afin d'afficher des annonces.
+        </div>
+
+        <h2>1. Informations traitées</h2>
+
+        <h3>Fichiers audio locaux</h3>
+        <p>
+            Pour afficher et lire votre musique, l'application accède aux fichiers audio présents
+            sur votre appareil (autorisation d'accès aux fichiers multimédias). Ces fichiers sont
+            lus localement&nbsp;: ils ne sont ni copiés, ni téléversés, ni transmis à qui que ce soit.
+        </p>
+
+        <h3>Données stockées localement</h3>
+        <p>
+            Vos playlists, vos favoris et vos préférences sont enregistrés uniquement sur votre
+            appareil (stockage local de l'application). Ils ne sont pas synchronisés vers un serveur
+            et disparaissent si vous désinstallez l'application ou effacez ses données.
+        </p>
+
+        <h3>Publicité (Google AdMob)</h3>
+        <p>
+            L'application affiche des annonces fournies par <strong>Google AdMob</strong>
+            (Google Mobile Ads SDK). Pour diffuser et mesurer ces annonces, Google peut collecter
+            et traiter certaines informations, notamment&nbsp;:
+        </p>
+        <ul>
+            <li>l'identifiant publicitaire de l'appareil (Advertising ID)&nbsp;;</li>
+            <li>des identifiants d'appareil et des informations techniques (modèle, système, langue)&nbsp;;</li>
+            <li>l'adresse IP (approximation de la localisation à l'échelle du pays/région)&nbsp;;</li>
+            <li>des données d'interaction avec les annonces.</li>
+        </ul>
+        <p>
+            Ces traitements sont réalisés par Google en tant que fournisseur tiers. Pour en savoir
+            plus, consultez la
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>
+            et la page
+            <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">« Comment Google utilise les données »</a>.
+        </p>
+
+        <h2>2. Consentement et RGPD</h2>
+        <p>
+            Si vous vous trouvez dans l'Espace économique européen (EEE), au Royaume-Uni ou en Suisse,
+            l'application affiche, avant de charger des annonces, un formulaire de consentement géré
+            par la plateforme <strong>Google User Messaging Platform (UMP)</strong>, conformément au
+            RGPD. Vous pouvez y accepter ou refuser l'utilisation de vos données à des fins
+            publicitaires. Si vous refusez, des annonces non personnalisées peuvent tout de même être
+            affichées.
+        </p>
+
+        <h2>3. Finalités</h2>
+        <p>Les informations décrites ci-dessus sont utilisées uniquement pour&nbsp;:</p>
+        <ul>
+            <li>vous permettre de parcourir et d'écouter votre musique locale&nbsp;;</li>
+            <li>enregistrer vos playlists et favoris sur votre appareil&nbsp;;</li>
+            <li>afficher des annonces via Google AdMob et financer l'application.</li>
+        </ul>
+        <p>Le développeur ne vend ni ne loue aucune donnée personnelle.</p>
+
+        <h2>4. Partage avec des tiers</h2>
+        <p>
+            Le seul tiers avec lequel des données sont partagées est <strong>Google</strong>, via le
+            SDK Google Mobile Ads (AdMob) et la plateforme de consentement UMP. Le développeur n'a pas
+            accès aux données collectées par Google et ne partage vos informations avec aucun autre
+            tiers.
+        </p>
+
+        <h2>5. Enfants</h2>
+        <p>
+            L'application n'est pas destinée aux enfants de moins de 13 ans et ne collecte pas
+            sciemment de données les concernant.
+        </p>
+
+        <h2>6. Sécurité et conservation</h2>
+        <p>
+            Les données de l'application (playlists, favoris, préférences) restent sur votre appareil
+            et sont soumises aux protections de votre système d'exploitation. Elles sont conservées
+            tant que vous utilisez l'application et sont supprimées lorsque vous effacez ses données
+            ou la désinstallez. Les données publicitaires sont conservées par Google selon ses propres
+            politiques.
+        </p>
+
+        <h2>7. Vos droits</h2>
+        <p>
+            Selon votre pays de résidence (notamment dans l'EEE et au Royaume-Uni), vous disposez de
+            droits d'accès, de rectification, d'effacement et d'opposition concernant vos données.
+            Vous pouvez&nbsp;:
+        </p>
+        <ul>
+            <li>modifier votre choix de consentement publicitaire via le formulaire UMP de l'application&nbsp;;</li>
+            <li>réinitialiser votre identifiant publicitaire dans les réglages de votre appareil&nbsp;;</li>
+            <li>supprimer toutes les données locales en effaçant les données de l'application ou en la désinstallant&nbsp;;</li>
+            <li>nous contacter pour toute demande relative à vos données (voir ci-dessous).</li>
+        </ul>
+
+        <h2>8. Modifications</h2>
+        <p>
+            Cette politique peut être mise à jour. Toute modification sera publiée sur cette page,
+            avec une date de mise à jour actualisée. Nous vous invitons à la consulter régulièrement.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+            Pour toute question concernant cette politique de confidentialité, vous pouvez nous
+            écrire à&nbsp;: <a href="mailto:rodolphefrancotte18@gmail.com">rodolphefrancotte18@gmail.com</a>
+        </p>
+
+        <footer>
+            © 2026 Music Player. Ce document est fourni à titre informatif et ne constitue pas un
+            conseil juridique.
+        </footer>
+    </section>
+
 </div>
+
+<script>
+    (function () {
+        var root = document.documentElement;
+        root.className += " js-on";
+
+        var sections = document.querySelectorAll("[data-lang]");
+        var buttons = document.querySelectorAll("[data-set-lang]");
+
+        function apply(lang) {
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].hidden = sections[i].getAttribute("data-lang") !== lang;
+            }
+            for (var j = 0; j < buttons.length; j++) {
+                buttons[j].setAttribute(
+                    "aria-pressed",
+                    buttons[j].getAttribute("data-set-lang") === lang ? "true" : "false"
+                );
+            }
+            root.setAttribute("lang", lang);
+            try { localStorage.setItem("mp-privacy-lang", lang); } catch (e) {}
+        }
+
+        // Priorité : choix mémorisé > ?lang=fr dans l'URL > langue du navigateur > anglais.
+        var stored = null;
+        try { stored = localStorage.getItem("mp-privacy-lang"); } catch (e) {}
+        var fromUrl = (location.search.match(/[?&]lang=(fr|en)\b/) || [])[1];
+        var fromNav = (navigator.language || "").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+
+        apply(stored || fromUrl || fromNav);
+
+        for (var k = 0; k < buttons.length; k++) {
+            buttons[k].addEventListener("click", function () {
+                apply(this.getAttribute("data-set-lang"));
+            });
+        }
+    })();
+</script>
 </body>
 </html>
