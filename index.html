@@ -137,7 +137,7 @@
         <header>
             <h1>Privacy Policy</h1>
             <p class="muted">App: <strong>Music Player</strong> (<code>com.francotte.musicplayer</code>)<br />
-                Last updated: 31 July 2026</p>
+                Last updated: 10 November 2026</p>
         </header>
 
         <p>
@@ -149,9 +149,9 @@
 
         <div class="card">
             <strong>In short:</strong> Music Player does not create an account, does not ask you for
-            any personal data, and keeps your playlists and favourites on your device only. The only
-            data shared with a third party is shared by the Google AdMob advertising SDK, in order to
-            display ads.
+            any personal data, and keeps your music, playlists and favourites on your device only.
+            Data is shared with third parties only by the advertising partners' SDKs (to display ads)
+            and by Firebase Crashlytics (to report crashes).
         </div>
 
         <h2>1. Information processed</h2>
@@ -165,38 +165,57 @@
 
         <h3>Data stored locally</h3>
         <p>
-            Your playlists, favourites and preferences are saved on your device only (the app's local
-            storage). They are not synchronised to any server and are removed if you uninstall the
-            app or clear its data.
+            Your playlists, favourites, hidden songs and preferences are saved on your device only
+            (the app's local storage). They are not synchronised to any server and are removed if you
+            uninstall the app or clear its data.
         </p>
 
-        <h3>Advertising (Google AdMob)</h3>
+        <h3>Advertising</h3>
         <p>
-            The app displays ads provided by <strong>Google AdMob</strong> (Google Mobile Ads SDK).
-            In order to serve and measure these ads, Google may collect and process certain
-            information, including:
+            The app is free. It is funded by a full-screen ad that may appear while the app is
+            starting (not on every launch). Ads are selected through the <strong>TopOn</strong>
+            mediation platform, which puts several advertising networks in competition. The app
+            includes the SDKs of the following partners:
+        </p>
+        <ul>
+            <li><strong>TopOn</strong> (Topon Pte. Ltd.), mediation platform and its TopOn ADX ad exchange: <a href="https://help.toponad.net/docs/Privacy-Policy" target="_blank" rel="noopener">privacy policy</a>;</li>
+            <li><strong>Pangle</strong> (ByteDance group): <a href="https://www.pangleglobal.com/privacy/enduser-en" target="_blank" rel="noopener">privacy policy</a>;</li>
+            <li><strong>Mintegral</strong>: <a href="https://www.mintegral.com/en/privacy" target="_blank" rel="noopener">privacy policy</a>;</li>
+            <li><strong>Google AdMob</strong> (Google LLC): <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">“How Google uses data”</a>.</li>
+        </ul>
+        <p>
+            To select, display and measure ads, and to prevent fraud, these partners may collect and
+            process:
         </p>
         <ul>
             <li>the device advertising identifier (Advertising ID);</li>
-            <li>device identifiers and technical information (model, operating system, language);</li>
-            <li>the IP address (approximate location at country/region level);</li>
-            <li>ad interaction data.</li>
+            <li>technical information about the device (model, operating system, language, screen, network type);</li>
+            <li>the IP address, used to infer an approximate location (country or city); no precise (GPS) location is collected;</li>
+            <li>interactions with ads (impressions, clicks);</li>
+            <li>diagnostic data about the display of ads.</li>
         </ul>
         <p>
-            This processing is carried out by Google as a third-party provider. For more information,
-            see
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>
-            and the
-            <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">“How Google uses data” page</a>.
+            These partners process this data as independent third parties, under their own privacy
+            policies. The developer does not receive any data that identifies you.
+        </p>
+
+        <h3>Crash reports (Firebase Crashlytics)</h3>
+        <p>
+            When the app crashes, <strong>Firebase Crashlytics</strong> (Google LLC) sends a crash
+            report: technical trace of the error, device model, operating system and app versions, and
+            a random installation identifier. These reports are used only to fix bugs, never for
+            advertising. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy and security</a>.
         </p>
 
         <h2>2. Consent and GDPR</h2>
         <p>
             If you are located in the European Economic Area (EEA), the United Kingdom or
             Switzerland, the app displays a consent form managed by the
-            <strong>Google User Messaging Platform (UMP)</strong> before loading any ads, in
-            accordance with the GDPR. There you can accept or refuse the use of your data for
-            advertising purposes. If you refuse, non-personalised ads may still be displayed.
+            <strong>Google User Messaging Platform (UMP)</strong>, in accordance with the GDPR. No ad
+            is loaded until your choice has been recorded in the IAB Transparency &amp; Consent
+            Framework (TCF) format, which the advertising partners read. When your location cannot be
+            determined, the app treats you as located in Europe. If you refuse, ads may still be
+            displayed, without using your data to personalise them.
         </p>
 
         <h2>3. Purposes</h2>
@@ -204,16 +223,18 @@
         <ul>
             <li>let you browse and listen to your local music;</li>
             <li>save your playlists and favourites on your device;</li>
-            <li>display ads through Google AdMob and fund the app.</li>
+            <li>display ads through the partners listed above and fund the app;</li>
+            <li>detect and fix crashes.</li>
         </ul>
         <p>The developer does not sell or rent any personal data.</p>
 
         <h2>4. Sharing with third parties</h2>
         <p>
-            The only third party with which data is shared is <strong>Google</strong>, through the
-            Google Mobile Ads SDK (AdMob) and the UMP consent platform. The developer has no access
-            to the data collected by Google and does not share your information with any other third
-            party.
+            Data is shared only with the advertising partners listed in section 1 (TopOn, Pangle,
+            Mintegral, Google AdMob), with Google for the UMP consent platform, and with Google for
+            Firebase Crashlytics. These providers may process data outside your country of residence.
+            The developer has no access to the data they collect and does not share your information
+            with any other third party.
         </p>
 
         <h2>5. Children</h2>
@@ -227,7 +248,8 @@
             The app's data (playlists, favourites, preferences) stays on your device and is subject
             to the protections of your operating system. It is retained for as long as you use the
             app and is deleted when you clear the app's data or uninstall it. Advertising data is
-            retained by Google according to its own policies.
+            retained by each advertising partner according to its own policy. Crash reports are
+            retained by Firebase Crashlytics for 90 days.
         </p>
 
         <h2>7. Your rights</h2>
@@ -238,7 +260,8 @@
         </p>
         <ul>
             <li>change your advertising consent choice through the app's UMP form;</li>
-            <li>reset your advertising identifier in your device settings;</li>
+            <li>reset or delete your advertising identifier in your device settings (Google &gt; Ads), which stops it from being used for personalised ads;</li>
+            <li>contact an advertising partner directly through its privacy policy (links in section 1);</li>
             <li>delete all local data by clearing the app's data or uninstalling it;</li>
             <li>contact us with any request concerning your data (see below).</li>
         </ul>
@@ -268,7 +291,7 @@
         <header>
             <h1>Politique de confidentialité</h1>
             <p class="muted">Application&nbsp;: <strong>Music Player</strong> (<code>com.francotte.musicplayer</code>)<br />
-                Dernière mise à jour&nbsp;: 31 juillet 2026</p>
+                Dernière mise à jour&nbsp;: 10 novembre 2026</p>
         </header>
 
         <p>
@@ -281,9 +304,10 @@
 
         <div class="card">
             <strong>En résumé&nbsp;:</strong> Music Player ne crée pas de compte, ne vous demande
-            aucune donnée personnelle et conserve vos playlists et favoris uniquement sur votre
-            appareil. Les seules données transmises à des tiers le sont par le SDK publicitaire
-            Google AdMob, afin d'afficher des annonces.
+            aucune donnée personnelle et conserve votre musique, vos playlists et vos favoris
+            uniquement sur votre appareil. Des données ne sont transmises à des tiers que par les SDK
+            des partenaires publicitaires (pour afficher des annonces) et par Firebase Crashlytics
+            (pour signaler les plantages).
         </div>
 
         <h2>1. Informations traitées</h2>
@@ -297,39 +321,60 @@
 
         <h3>Données stockées localement</h3>
         <p>
-            Vos playlists, vos favoris et vos préférences sont enregistrés uniquement sur votre
-            appareil (stockage local de l'application). Ils ne sont pas synchronisés vers un serveur
-            et disparaissent si vous désinstallez l'application ou effacez ses données.
+            Vos playlists, vos favoris, vos titres masqués et vos préférences sont enregistrés
+            uniquement sur votre appareil (stockage local de l'application). Ils ne sont pas
+            synchronisés vers un serveur et disparaissent si vous désinstallez l'application ou
+            effacez ses données.
         </p>
 
-        <h3>Publicité (Google AdMob)</h3>
+        <h3>Publicité</h3>
         <p>
-            L'application affiche des annonces fournies par <strong>Google AdMob</strong>
-            (Google Mobile Ads SDK). Pour diffuser et mesurer ces annonces, Google peut collecter
-            et traiter certaines informations, notamment&nbsp;:
+            L'application est gratuite. Elle est financée par une annonce plein écran qui peut
+            s'afficher au démarrage (pas à chaque lancement). Les annonces sont choisies par la
+            plateforme de médiation <strong>TopOn</strong>, qui met plusieurs régies publicitaires en
+            concurrence. L'application intègre les SDK des partenaires suivants&nbsp;:
+        </p>
+        <ul>
+            <li><strong>TopOn</strong> (Topon Pte. Ltd.), plateforme de médiation et sa place de marché TopOn ADX&nbsp;: <a href="https://help.toponad.net/docs/Privacy-Policy" target="_blank" rel="noopener">politique de confidentialité</a>&nbsp;;</li>
+            <li><strong>Pangle</strong> (groupe ByteDance)&nbsp;: <a href="https://www.pangleglobal.com/privacy/enduser-en" target="_blank" rel="noopener">politique de confidentialité</a>&nbsp;;</li>
+            <li><strong>Mintegral</strong>&nbsp;: <a href="https://www.mintegral.com/en/privacy" target="_blank" rel="noopener">politique de confidentialité</a>&nbsp;;</li>
+            <li><strong>Google AdMob</strong> (Google LLC)&nbsp;: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a> et <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">« Comment Google utilise les données »</a>.</li>
+        </ul>
+        <p>
+            Pour choisir, afficher et mesurer les annonces, et pour lutter contre la fraude, ces
+            partenaires peuvent collecter et traiter&nbsp;:
         </p>
         <ul>
             <li>l'identifiant publicitaire de l'appareil (Advertising ID)&nbsp;;</li>
-            <li>des identifiants d'appareil et des informations techniques (modèle, système, langue)&nbsp;;</li>
-            <li>l'adresse IP (approximation de la localisation à l'échelle du pays/région)&nbsp;;</li>
-            <li>des données d'interaction avec les annonces.</li>
+            <li>des informations techniques sur l'appareil (modèle, système, langue, écran, type de réseau)&nbsp;;</li>
+            <li>l'adresse IP, qui sert à déduire une localisation approximative (pays ou ville)&nbsp;; aucune localisation précise (GPS) n'est collectée&nbsp;;</li>
+            <li>les interactions avec les annonces (affichages, clics)&nbsp;;</li>
+            <li>des données de diagnostic sur l'affichage des annonces.</li>
         </ul>
         <p>
-            Ces traitements sont réalisés par Google en tant que fournisseur tiers. Pour en savoir
-            plus, consultez la
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>
-            et la page
-            <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">« Comment Google utilise les données »</a>.
+            Ces partenaires traitent ces données en tant que tiers indépendants, selon leurs propres
+            politiques de confidentialité. Le développeur ne reçoit aucune donnée permettant de vous
+            identifier.
+        </p>
+
+        <h3>Rapports de plantage (Firebase Crashlytics)</h3>
+        <p>
+            Lorsque l'application plante, <strong>Firebase Crashlytics</strong> (Google LLC) envoie
+            un rapport&nbsp;: trace technique de l'erreur, modèle de l'appareil, versions du système
+            et de l'application, et un identifiant d'installation aléatoire. Ces rapports servent
+            uniquement à corriger les bugs, jamais à la publicité. Voir <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">confidentialité et sécurité de Firebase</a>.
         </p>
 
         <h2>2. Consentement et RGPD</h2>
         <p>
             Si vous vous trouvez dans l'Espace économique européen (EEE), au Royaume-Uni ou en Suisse,
-            l'application affiche, avant de charger des annonces, un formulaire de consentement géré
-            par la plateforme <strong>Google User Messaging Platform (UMP)</strong>, conformément au
-            RGPD. Vous pouvez y accepter ou refuser l'utilisation de vos données à des fins
-            publicitaires. Si vous refusez, des annonces non personnalisées peuvent tout de même être
-            affichées.
+            l'application affiche un formulaire de consentement géré par la plateforme
+            <strong>Google User Messaging Platform (UMP)</strong>, conformément au RGPD. Aucune
+            annonce n'est chargée tant que votre choix n'a pas été enregistré au format IAB
+            Transparency &amp; Consent Framework (TCF), que lisent les partenaires publicitaires.
+            Lorsque votre localisation ne peut pas être déterminée, l'application considère
+            que vous êtes en Europe. Si vous refusez, des annonces peuvent tout de même s'afficher,
+            sans que vos données servent à les personnaliser.
         </p>
 
         <h2>3. Finalités</h2>
@@ -337,16 +382,18 @@
         <ul>
             <li>vous permettre de parcourir et d'écouter votre musique locale&nbsp;;</li>
             <li>enregistrer vos playlists et favoris sur votre appareil&nbsp;;</li>
-            <li>afficher des annonces via Google AdMob et financer l'application.</li>
+            <li>afficher des annonces par les partenaires cités plus haut et financer l'application&nbsp;;</li>
+            <li>détecter et corriger les plantages.</li>
         </ul>
         <p>Le développeur ne vend ni ne loue aucune donnée personnelle.</p>
 
         <h2>4. Partage avec des tiers</h2>
         <p>
-            Le seul tiers avec lequel des données sont partagées est <strong>Google</strong>, via le
-            SDK Google Mobile Ads (AdMob) et la plateforme de consentement UMP. Le développeur n'a pas
-            accès aux données collectées par Google et ne partage vos informations avec aucun autre
-            tiers.
+            Des données ne sont partagées qu'avec les partenaires publicitaires cités à la section 1
+            (TopOn, Pangle, Mintegral, Google AdMob), avec Google pour la plateforme de consentement
+            UMP et avec Google pour Firebase Crashlytics. Ces prestataires peuvent traiter des données
+            hors de votre pays de résidence. Le développeur n'a pas accès aux données qu'ils
+            collectent et ne partage vos informations avec aucun autre tiers.
         </p>
 
         <h2>5. Enfants</h2>
@@ -360,8 +407,8 @@
             Les données de l'application (playlists, favoris, préférences) restent sur votre appareil
             et sont soumises aux protections de votre système d'exploitation. Elles sont conservées
             tant que vous utilisez l'application et sont supprimées lorsque vous effacez ses données
-            ou la désinstallez. Les données publicitaires sont conservées par Google selon ses propres
-            politiques.
+            ou la désinstallez. Les données publicitaires sont conservées par chaque partenaire publicitaire selon sa
+            propre politique. Les rapports de plantage sont conservés 90 jours par Firebase Crashlytics.
         </p>
 
         <h2>7. Vos droits</h2>
@@ -372,7 +419,8 @@
         </p>
         <ul>
             <li>modifier votre choix de consentement publicitaire via le formulaire UMP de l'application&nbsp;;</li>
-            <li>réinitialiser votre identifiant publicitaire dans les réglages de votre appareil&nbsp;;</li>
+            <li>réinitialiser ou supprimer votre identifiant publicitaire dans les réglages de votre appareil (Google &gt; Annonces), ce qui empêche son usage pour des annonces personnalisées&nbsp;;</li>
+            <li>contacter directement un partenaire publicitaire par sa politique de confidentialité (liens à la section 1)&nbsp;;</li>
             <li>supprimer toutes les données locales en effaçant les données de l'application ou en la désinstallant&nbsp;;</li>
             <li>nous contacter pour toute demande relative à vos données (voir ci-dessous).</li>
         </ul>
